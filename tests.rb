@@ -17,7 +17,6 @@ require './rental'
 # rental = rental
 # person = person
 
-
 book1 = Book.new('Emery black', 'Jax')
 book2 = Book.new('Harry Potter', 'JKRowling')
 
