@@ -39,6 +39,7 @@
 
 - [ ] **Person, Student & Teacher Classes**
 - [ ] **Uses the "Decorator" design pattern.**
+- [ ] **Associations.**
 
 
 
@@ -130,7 +131,6 @@ Deployment is not available yet.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Project 3: set up associations.**
 - [ ] **Project 4: add basic UI.**
 - [ ] **Project 6: preserve data.**
 - [ ] **Project 7: unit tests.**
