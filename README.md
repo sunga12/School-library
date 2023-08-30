@@ -37,9 +37,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Person Class**
-- **Student Class**
-- **Teacher Class**
+- [ ] **Person, Student & Teacher Classes**
+- [ ] **Uses the "Decorator" design pattern.**
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +130,6 @@ Deployment is not available yet.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Project 2: use the "Decorator" design pattern.**
 - [ ] **Project 3: set up associations.**
 - [ ] **Project 4: add basic UI.**
 - [ ] **Project 6: preserve data.**
