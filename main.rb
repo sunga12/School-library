@@ -42,7 +42,6 @@ def process_choice(choice, app)
 end
 # rubocop:enable Metrics
 
-
 def main
   display_options
 end
