@@ -77,7 +77,7 @@ class App
     title = gets.chomp
     puts 'Whos is the author?'
     author = gets.chomp
-    new_book = Book.new(title, author)
+    new_book = Book.new(author, title)
     puts "Book created Successfully: Title: #{new_book.title}, Author: #{new_book.author}"
     @books << new_book
   end
