@@ -1,0 +1,13 @@
+[
+  {
+    "date" : "2023/2/33",
+    "title" : "Arsenal",
+    "author" : "Mikel Arteta",
+    "id" : 528,
+    "name" : "Kai",
+    "age" : 43,
+    "has_permission" : true,
+    "type" : "Teacher",
+    "specialization" : "Football"
+  }
+]
