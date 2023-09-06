@@ -14,10 +14,10 @@ main
 # 2b. using JSON.generate(data) & File.write(args)
 
 # How do you save data to file?
-#   what format is it in? 
-#     ie people, books & rentals == arrays 
+#   what format is it in?
+#     ie people, books & rentals == arrays
 #     if ruby = [0, 's', :foo]
-#     then json = JSON.generate(ruby) 
+#     then json = JSON.generate(ruby)
 #          json # => '[0,"s","foo"]'
 
 #     if opts = {
@@ -30,11 +30,11 @@ main
 
 #     JSON.generate(ruby, opts)
 
-#     then check if  File.exists? 
+#     then check if  File.exists?
 #       then  write to a file:
 #         File.write("log.txt", json, mode: "a")
 #     if there is already json data, it should write using append mode
- 
+
 # 3. after exit, run program, saved data should load ie books, people and rentals
 
 # How do you load data?
@@ -46,6 +46,3 @@ main
 #     then ruby = JSON.parse(json)
 #          ruby # => ["foo", 1, 1.0, 200.0, true, false, nil]
 #          then set the appropriate array to the saved data eg @people = ruby
-
-    
-

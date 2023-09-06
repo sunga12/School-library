@@ -19,7 +19,7 @@
 require 'json'
 require './student'
 require './teacher'
-   
+
 class LoadData
   def load_books
     books = []
@@ -28,8 +28,8 @@ class LoadData
     json = File.read('./data/books.json')
     data = JSON.parse(json)
 
-    data.each do |item| 
-    books << Book.new(item['title'], item['author']) 
+    data.each do |item|
+      books << Book.new(item['title'], item['author'])
     end
     books
   end
@@ -41,14 +41,14 @@ class LoadData
     json = File.read('./data/people.json')
     data = JSON.parse(json)
 
-    data.each do |item| 
+    data.each do |item|
       if item['type'] == 'Student'
         student = Student.new(item['age'], item['name'])
         # student.classroom = item['classroom']
         student.parent_permission = item['has_permission']
         student.id = item['id']
         people << student
-      else 
+      else
         teacher = Teacher.new(item['age'], item['name'], item['specialization'])
         teacher.id = item['id']
         people << teacher
@@ -65,8 +65,8 @@ class LoadData
     data = JSON.parse(json)
 
     data.each do |item|
-    rental = make_rental(item)
-    rentals << rental
+      rental = make_rental(item)
+      rentals << rental
     end
     rentals
   end
@@ -76,13 +76,13 @@ class LoadData
       student = Student.new(rental['age'], rental['name'])
       student.parent_permission = rental['has_permission']
       student.id = rental['id']
-      book = Book.new(rental['title'], rental['author']) 
-      rental = Rental.new(rental['date'], student, book)
+      book = Book.new(rental['title'], rental['author'])
+      Rental.new(rental['date'], student, book)
     else
       teacher = Teacher.new(rental['age'], rental['name'], rental['specialization'])
       teacher.id = rental['id']
-      book = Book.new(rental['title'], rental['author']) 
-      rental = Rental.new(rental['date'], teacher, book)
+      book = Book.new(rental['title'], rental['author'])
+      Rental.new(rental['date'], teacher, book)
     end
   end
 end
