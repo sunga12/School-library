@@ -2,12 +2,14 @@ require './student'
 require './teacher'
 require './book'
 require './rental'
+require './save_data'
+require './load_data'
 
 class App
   def initialize
-    @books = []
-    @people = []
-    @rentals_list = []
+    @books = LoadData.new.load_books
+    @people = LoadData.new.load_people
+    @rentals_list = LoadData.new.load_rentals
   end
 
   def list_books
@@ -130,6 +132,9 @@ class App
   end
 
   def exit_library
+    SaveData.new.save_books(@books) unless @books == []
+    SaveData.new.save_people(@people) unless @people == []
+    SaveData.new.save_rentals(@rentals_list) unless @rentals_list == []
     puts 'Thank you and goodbye'
   end
 end
