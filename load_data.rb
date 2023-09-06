@@ -43,8 +43,8 @@ class LoadData
 
     data.each do |item|
       if item['type'] == 'Student'
-        student = Student.new(item['age'], item['name'])
-        # student.classroom = item['classroom']
+        student = Student.new(item['age'], item['name'], item['classroom'])
+        # student.classroom=(item['classroom'])
         student.parent_permission = item['has_permission']
         student.id = item['id']
         people << student

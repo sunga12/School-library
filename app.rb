@@ -44,10 +44,11 @@ class App
   end
 
   def create_student
-    puts 'Enter a Name, then their Age'
+    puts 'Enter a Name, then their Age, then their classroom'
     name = gets.chomp
     age = gets.chomp.to_i
-    new_student = Student.new(age, name)
+    classroom = gets.chomp
+    new_student = Student.new(age, name, classroom)
     print 'Do they have Parent permission? (y/n)'
     permission = gets.chomp
     while permission != 'y' && permission != 'n'
